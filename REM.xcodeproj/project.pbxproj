@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42F3472D240D52E600915D1E /* UScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F3472B240D52E600915D1E /* UScene.cpp */; };
+		42F34732240D54F700915D1E /* PluginInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34730240D54F700915D1E /* PluginInterface.cpp */; };
+		42F34735240D550400915D1E /* SceneInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34733240D550400915D1E /* SceneInterface.cpp */; };
+		42F34738240D555800915D1E /* ObjectInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34736240D555800915D1E /* ObjectInterface.cpp */; };
+		42F3473B240D556500915D1E /* TaskInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34739240D556500915D1E /* TaskInterface.cpp */; };
+		42F3473F240D575900915D1E /* Subject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F3473D240D575900915D1E /* Subject.cpp */; };
+		42F34742240D579000915D1E /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34740240D579000915D1E /* Observer.cpp */; };
+		42F34745240D57EC00915D1E /* ChangeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34743240D57EC00915D1E /* ChangeController.cpp */; };
 		42F81574229F0D5600BC38AD /* REMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F81573229F0D5600BC38AD /* REMain.cpp */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,22 @@
 		425EC4B2229FE0CD008894BB /* UObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UObject.hpp; sourceTree = "<group>"; };
 		425EC4B7229FE430008894BB /* Singleton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Singleton.hpp; sourceTree = "<group>"; };
 		42B844A423CB6B5A00B2EB78 /* graphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = graphics.xcodeproj; path = graphics/graphics.xcodeproj; sourceTree = "<group>"; };
+		42F3472B240D52E600915D1E /* UScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UScene.cpp; sourceTree = "<group>"; };
+		42F3472C240D52E600915D1E /* UScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UScene.hpp; sourceTree = "<group>"; };
+		42F34730240D54F700915D1E /* PluginInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PluginInterface.cpp; sourceTree = "<group>"; };
+		42F34731240D54F700915D1E /* PluginInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PluginInterface.hpp; sourceTree = "<group>"; };
+		42F34733240D550400915D1E /* SceneInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneInterface.cpp; sourceTree = "<group>"; };
+		42F34734240D550400915D1E /* SceneInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneInterface.hpp; sourceTree = "<group>"; };
+		42F34736240D555800915D1E /* ObjectInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectInterface.cpp; sourceTree = "<group>"; };
+		42F34737240D555800915D1E /* ObjectInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObjectInterface.hpp; sourceTree = "<group>"; };
+		42F34739240D556500915D1E /* TaskInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TaskInterface.cpp; sourceTree = "<group>"; };
+		42F3473A240D556500915D1E /* TaskInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TaskInterface.hpp; sourceTree = "<group>"; };
+		42F3473D240D575900915D1E /* Subject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Subject.cpp; sourceTree = "<group>"; };
+		42F3473E240D575900915D1E /* Subject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Subject.hpp; sourceTree = "<group>"; };
+		42F34740240D579000915D1E /* Observer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
+		42F34741240D579000915D1E /* Observer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Observer.hpp; sourceTree = "<group>"; };
+		42F34743240D57EC00915D1E /* ChangeController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChangeController.cpp; sourceTree = "<group>"; };
+		42F34744240D57EC00915D1E /* ChangeController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChangeController.hpp; sourceTree = "<group>"; };
 		42F81570229F0D5600BC38AD /* REM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = REM; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F81573229F0D5600BC38AD /* REMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = REMain.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +88,14 @@
 		425EC4AD229FE04F008894BB /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				42F3473C240D572D00915D1E /* Communication */,
+				42F3472F240D54BE00915D1E /* Plugin */,
 				425EC4AE229FE068008894BB /* Framework.cpp */,
 				425EC4AF229FE068008894BB /* Framework.hpp */,
 				425EC4B1229FE0CD008894BB /* UObject.cpp */,
 				425EC4B2229FE0CD008894BB /* UObject.hpp */,
+				42F3472B240D52E600915D1E /* UScene.cpp */,
+				42F3472C240D52E600915D1E /* UScene.hpp */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -86,6 +114,34 @@
 				42B844A923CB6B5B00B2EB78 /* libgraphics.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		42F3472F240D54BE00915D1E /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				42F34730240D54F700915D1E /* PluginInterface.cpp */,
+				42F34731240D54F700915D1E /* PluginInterface.hpp */,
+				42F34733240D550400915D1E /* SceneInterface.cpp */,
+				42F34734240D550400915D1E /* SceneInterface.hpp */,
+				42F34736240D555800915D1E /* ObjectInterface.cpp */,
+				42F34737240D555800915D1E /* ObjectInterface.hpp */,
+				42F34739240D556500915D1E /* TaskInterface.cpp */,
+				42F3473A240D556500915D1E /* TaskInterface.hpp */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		42F3473C240D572D00915D1E /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				42F3473D240D575900915D1E /* Subject.cpp */,
+				42F3473E240D575900915D1E /* Subject.hpp */,
+				42F34740240D579000915D1E /* Observer.cpp */,
+				42F34741240D579000915D1E /* Observer.hpp */,
+				42F34743240D57EC00915D1E /* ChangeController.cpp */,
+				42F34744240D57EC00915D1E /* ChangeController.hpp */,
+			);
+			path = Communication;
 			sourceTree = "<group>";
 		};
 		42F81567229F0D5600BC38AD = {
@@ -188,6 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F3473B240D556500915D1E /* TaskInterface.cpp in Sources */,
+				42F3472D240D52E600915D1E /* UScene.cpp in Sources */,
+				42F3473F240D575900915D1E /* Subject.cpp in Sources */,
+				42F34732240D54F700915D1E /* PluginInterface.cpp in Sources */,
+				42F34735240D550400915D1E /* SceneInterface.cpp in Sources */,
+				42F34742240D579000915D1E /* Observer.cpp in Sources */,
+				42F34738240D555800915D1E /* ObjectInterface.cpp in Sources */,
+				42F34745240D57EC00915D1E /* ChangeController.cpp in Sources */,
 				42F81574229F0D5600BC38AD /* REMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

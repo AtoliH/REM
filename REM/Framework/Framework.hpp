@@ -11,10 +11,10 @@
 
 class Framework
 {
-    <#instance variables#>
+    
     
 public:
-    <#member functions#>
+    
 };
 
 #endif /* Framework_hpp */
