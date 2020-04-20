@@ -10,15 +10,19 @@
 #include "graphics.hpp"
 #include "graphicsPriv.hpp"
 
-void graphics::HelloWorld(const char * s)
-{
-    graphicsPriv *theObj = new graphicsPriv;
-    theObj->HelloWorldPriv(s);
-    delete theObj;
-};
+extern "C" void openGUI();
 
-void graphicsPriv::HelloWorldPriv(const char * s) 
-{
-    std::cout << s << std::endl;
-};
+extern "C" IPlugin* create_handle() {
+    return new graphics;
+}
 
+extern "C" void destroy_handle(IPlugin* handle) {
+    delete static_cast<graphics*>(handle);
+}
+
+void graphics::createScene() {
+    openGUI();
+}
+
+void graphics::destroyScene() {
+}

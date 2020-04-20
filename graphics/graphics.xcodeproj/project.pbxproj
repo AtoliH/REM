@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425D35192415717A00E9C0E7 /* graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425D35182415717A00E9C0E7 /* graphics.swift */; };
 		42B8449A23CB6B5A00B2EB78 /* graphics.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42B8449923CB6B5A00B2EB78 /* graphics.hpp */; };
 		42B8449C23CB6B5A00B2EB78 /* graphicsPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42B8449B23CB6B5A00B2EB78 /* graphicsPriv.hpp */; };
 		42B8449E23CB6B5A00B2EB78 /* graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B8449D23CB6B5A00B2EB78 /* graphics.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425D35172415717A00E9C0E7 /* graphics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "graphics-Bridging-Header.h"; sourceTree = "<group>"; };
+		425D35182415717A00E9C0E7 /* graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graphics.swift; sourceTree = "<group>"; };
 		42B8449623CB6B5A00B2EB78 /* libgraphics.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgraphics.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B8449923CB6B5A00B2EB78 /* graphics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = graphics.hpp; sourceTree = "<group>"; };
 		42B8449B23CB6B5A00B2EB78 /* graphicsPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = graphicsPriv.hpp; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 				42B8449923CB6B5A00B2EB78 /* graphics.hpp */,
 				42B8449B23CB6B5A00B2EB78 /* graphicsPriv.hpp */,
 				42B8449D23CB6B5A00B2EB78 /* graphics.cpp */,
+				425D35182415717A00E9C0E7 /* graphics.swift */,
+				425D35172415717A00E9C0E7 /* graphics-Bridging-Header.h */,
 			);
 			path = graphics;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				TargetAttributes = {
 					42B8449523CB6B5A00B2EB78 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -133,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425D35192415717A00E9C0E7 /* graphics.swift in Sources */,
 				42B8449E23CB6B5A00B2EB78 /* graphics.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +259,7 @@
 		42B844A223CB6B5A00B2EB78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -260,14 +268,24 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../REM/Framework/Plugin\"";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "graphics/graphics-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		42B844A323CB6B5A00B2EB78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,8 +294,16 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../REM/Framework/Plugin\"";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "graphics/graphics-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

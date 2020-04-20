@@ -12,10 +12,13 @@
 /* The classes below are exported */
 #pragma GCC visibility push(default)
 
-class graphics
-{
-    public:
-    void HelloWorld(const char *);
+#include "IPlugin.hpp"
+
+class graphics: public IPlugin {
+    
+public:
+    virtual void createScene();
+    virtual void destroyScene();
 };
 
 #pragma GCC visibility pop
