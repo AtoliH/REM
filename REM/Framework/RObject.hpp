@@ -9,13 +9,18 @@
 #ifndef RObject_hpp
 #define RObject_hpp
 
+#include "Loader.hpp"
+#include "IRObject.hpp"
+
 /**
- * Universal object that can merely communicate with managers.
+ * Universal object that can communicate with managers.
  */
-class RObject
-{
-    
+template <class... Systems>
+class RObject: public IRObject {
 public:
+    RObject(const Loader &loader) {
+        installObjects(loader.loadObjects<Systems...>());
+    }
 };
 
 

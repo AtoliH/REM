@@ -25,7 +25,7 @@ public:
     void load(const std::string &path);
     
     template <class T>
-    std::shared_ptr<T> loadPlugin() {
+    std::shared_ptr<T> fetchPlugin() {
         // TODO: Static assert
         
         return pluginManager->fetchPlugin<T>();

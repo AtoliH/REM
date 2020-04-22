@@ -9,15 +9,15 @@
 #ifndef SceneInterface_hpp
 #define SceneInterface_hpp
 
-#include "Observer.hpp"
-#include "Subject.hpp"
 
-class IScene: public Observer, Subject {
+class IScene{
+
+};
+
+
+template <typename T>
+class Scene: public IScene {
     
-public:
-    virtual void createObject() = 0;
-    virtual void destroyObject() = 0;
-    virtual void getPrimaryTask() = 0;
 };
 
 #endif /* SceneInterface_hpp */

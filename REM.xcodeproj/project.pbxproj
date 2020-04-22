@@ -37,8 +37,8 @@
 		42B942D32444EB7700C38BED /* PlatformManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42A4E1992415140F00BD17FF /* PlatformManager.hpp */; };
 		42B942D62444EB8500C38BED /* RObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425EC4B1229FE0CD008894BB /* RObject.cpp */; };
 		42B942D72444EB8500C38BED /* RObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 425EC4B2229FE0CD008894BB /* RObject.hpp */; };
-		42B942D82444EB8500C38BED /* IRScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F3472B240D52E600915D1E /* IRScene.cpp */; };
-		42B942D92444EB8500C38BED /* IRScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F3472C240D52E600915D1E /* IRScene.hpp */; };
+		42B942D82444EB8500C38BED /* RScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F3472B240D52E600915D1E /* RScene.cpp */; };
+		42B942D92444EB8500C38BED /* RScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F3472C240D52E600915D1E /* RScene.hpp */; };
 		42B942DA2444EB8500C38BED /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E1892413FF2600BD17FF /* Game.cpp */; };
 		42B942DB2444EB8500C38BED /* Game.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42A4E18A2413FF2600BD17FF /* Game.hpp */; };
 		42B942DC2444EB8500C38BED /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E18C24140BB300BD17FF /* Scheduler.cpp */; };
@@ -49,8 +49,6 @@
 		42B942E12444EB8A00C38BED /* IScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F34734240D550400915D1E /* IScene.hpp */; };
 		42B942E22444EB8A00C38BED /* IObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34736240D555800915D1E /* IObject.cpp */; };
 		42B942E32444EB8A00C38BED /* IObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F34737240D555800915D1E /* IObject.hpp */; };
-		42B942E42444EB8A00C38BED /* TaskInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C3D382241538AF008B7DF4 /* TaskInterface.cpp */; };
-		42B942E52444EB8A00C38BED /* TaskInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C3D383241538AF008B7DF4 /* TaskInterface.hpp */; };
 		42B942E62444EB8E00C38BED /* Subject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F3473D240D575900915D1E /* Subject.cpp */; };
 		42B942E72444EB8E00C38BED /* Subject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F3473E240D575900915D1E /* Subject.hpp */; };
 		42B942E82444EB8E00C38BED /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34740240D579000915D1E /* Observer.cpp */; };
@@ -60,6 +58,12 @@
 		42B942F32444EED900C38BED /* REMTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B942F22444EED900C38BED /* REMTest.cpp */; };
 		42B94314244524B000C38BED /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 42B943042445243E00C38BED /* gtest-all.cc */; };
 		42B943D224452D6600C38BED /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
+		42C78784244F7A7300E42E33 /* IRObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C78782244F7A7300E42E33 /* IRObject.cpp */; };
+		42C78785244F7A7300E42E33 /* IRObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C78783244F7A7300E42E33 /* IRObject.hpp */; };
+		42C78789244F807000E42E33 /* ITask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C78787244F806F00E42E33 /* ITask.cpp */; };
+		42C7878A244F807000E42E33 /* ITask.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C78788244F806F00E42E33 /* ITask.hpp */; };
+		42C78790244FC6AB00E42E33 /* TestObject1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C7878D244FC69300E42E33 /* TestObject1.hpp */; };
+		42C78794245094CF00E42E33 /* TestScene1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C78792245094CF00E42E33 /* TestScene1.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +115,6 @@
 		426773C1244D093400FC369C /* TestPlugin2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin2.hpp; sourceTree = "<group>"; };
 		426773C3244D093400FC369C /* TestPlugin2Priv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin2Priv.hpp; sourceTree = "<group>"; };
 		426773C5244D093400FC369C /* TestPlugin2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestPlugin2.cpp; sourceTree = "<group>"; };
-		426A9812244753F3003E60EB /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../../../usr/local/lib/libgtest.a; sourceTree = "<group>"; };
 		426A98152447660E003E60EB /* DynamicLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicLibrary.cpp; sourceTree = "<group>"; };
 		426A98162447660E003E60EB /* DynamicLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicLibrary.hpp; sourceTree = "<group>"; };
 		426A981924476D27003E60EB /* PluginManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PluginManager.cpp; sourceTree = "<group>"; };
@@ -130,10 +133,15 @@
 		42B942F22444EED900C38BED /* REMTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = REMTest.cpp; sourceTree = "<group>"; };
 		42B943042445243E00C38BED /* gtest-all.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "gtest-all.cc"; sourceTree = "<group>"; };
 		42B943092445247600C38BED /* libgtest.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgtest.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		42C3D382241538AF008B7DF4 /* TaskInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TaskInterface.cpp; sourceTree = "<group>"; };
-		42C3D383241538AF008B7DF4 /* TaskInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TaskInterface.hpp; sourceTree = "<group>"; };
-		42F3472B240D52E600915D1E /* IRScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRScene.cpp; sourceTree = "<group>"; };
-		42F3472C240D52E600915D1E /* IRScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRScene.hpp; sourceTree = "<group>"; };
+		42C78782244F7A7300E42E33 /* IRObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRObject.cpp; sourceTree = "<group>"; };
+		42C78783244F7A7300E42E33 /* IRObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRObject.hpp; sourceTree = "<group>"; };
+		42C78787244F806F00E42E33 /* ITask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ITask.cpp; sourceTree = "<group>"; };
+		42C78788244F806F00E42E33 /* ITask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ITask.hpp; sourceTree = "<group>"; };
+		42C7878B244FB4FD00E42E33 /* VarType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VarType.h; sourceTree = "<group>"; };
+		42C7878D244FC69300E42E33 /* TestObject1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestObject1.hpp; sourceTree = "<group>"; };
+		42C78792245094CF00E42E33 /* TestScene1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestScene1.hpp; sourceTree = "<group>"; };
+		42F3472B240D52E600915D1E /* RScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RScene.cpp; sourceTree = "<group>"; };
+		42F3472C240D52E600915D1E /* RScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RScene.hpp; sourceTree = "<group>"; };
 		42F34730240D54F700915D1E /* IPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IPlugin.cpp; sourceTree = "<group>"; };
 		42F34731240D54F700915D1E /* IPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IPlugin.hpp; sourceTree = "<group>"; };
 		42F34733240D550400915D1E /* IScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IScene.cpp; sourceTree = "<group>"; };
@@ -219,6 +227,8 @@
 				4220EB48244CC9AD0022BA31 /* TestPlugin1Priv.hpp */,
 				4220EB4A244CC9AD0022BA31 /* TestPlugin1.cpp */,
 				42456718244CCD3A0090280F /* TestSystem1.hpp */,
+				42C7878D244FC69300E42E33 /* TestObject1.hpp */,
+				42C78792245094CF00E42E33 /* TestScene1.hpp */,
 			);
 			path = TestPlugin1;
 			sourceTree = "<group>";
@@ -226,7 +236,6 @@
 		424CE68B23CE190C00E7CC2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				426A9812244753F3003E60EB /* libgtest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,17 +243,19 @@
 		425EC4AD229FE04F008894BB /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				42F3472F240D54BE00915D1E /* Plugin */,
+				42C78782244F7A7300E42E33 /* IRObject.cpp */,
+				42C78783244F7A7300E42E33 /* IRObject.hpp */,
 				425EC4B1229FE0CD008894BB /* RObject.cpp */,
 				425EC4B2229FE0CD008894BB /* RObject.hpp */,
-				42F3472B240D52E600915D1E /* IRScene.cpp */,
-				42F3472C240D52E600915D1E /* IRScene.hpp */,
+				42F3472B240D52E600915D1E /* RScene.cpp */,
+				42F3472C240D52E600915D1E /* RScene.hpp */,
 				42A4E1892413FF2600BD17FF /* Game.cpp */,
 				42A4E18A2413FF2600BD17FF /* Game.hpp */,
 				42A4E18C24140BB300BD17FF /* Scheduler.cpp */,
 				42A4E18D24140BB300BD17FF /* Scheduler.hpp */,
 				4220EB34244C66A40022BA31 /* Loader.cpp */,
 				4220EB35244C66A40022BA31 /* Loader.hpp */,
+				42F3472F240D54BE00915D1E /* Plugin */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -344,8 +355,9 @@
 				42F34734240D550400915D1E /* IScene.hpp */,
 				42F34736240D555800915D1E /* IObject.cpp */,
 				42F34737240D555800915D1E /* IObject.hpp */,
-				42C3D382241538AF008B7DF4 /* TaskInterface.cpp */,
-				42C3D383241538AF008B7DF4 /* TaskInterface.hpp */,
+				42C78787244F806F00E42E33 /* ITask.cpp */,
+				42C78788244F806F00E42E33 /* ITask.hpp */,
+				42C7878B244FB4FD00E42E33 /* VarType.h */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -356,8 +368,8 @@
 				42C3D38724156CF3008B7DF4 /* BasePlugins */,
 				42F81572229F0D5600BC38AD /* REM */,
 				42B942F12444EED900C38BED /* REMTest */,
-				42B94303244523DD00C38BED /* GoogleTest */,
 				426773C0244D093400FC369C /* TestPlugin2 */,
+				42B94303244523DD00C38BED /* GoogleTest */,
 				424CE68B23CE190C00E7CC2D /* Frameworks */,
 				42F81571229F0D5600BC38AD /* Products */,
 			);
@@ -392,8 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4220EB49244CC9AD0022BA31 /* TestPlugin1Priv.hpp in Headers */,
+				42C78790244FC6AB00E42E33 /* TestObject1.hpp in Headers */,
 				4245671A244CCD3A0090280F /* TestSystem1.hpp in Headers */,
 				4220EB47244CC9AD0022BA31 /* TestPlugin1.hpp in Headers */,
+				42C78794245094CF00E42E33 /* TestScene1.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,15 +429,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B942D12444EB7700C38BED /* EnvironmentManager.hpp in Headers */,
-				42B942D92444EB8500C38BED /* IRScene.hpp in Headers */,
+				42B942D92444EB8500C38BED /* RScene.hpp in Headers */,
 				426A98182447660E003E60EB /* DynamicLibrary.hpp in Headers */,
+				42C78785244F7A7300E42E33 /* IRObject.hpp in Headers */,
 				42B942E92444EB8E00C38BED /* Observer.hpp in Headers */,
 				42B942E12444EB8A00C38BED /* IScene.hpp in Headers */,
 				42B942EB2444EB8E00C38BED /* StateManager.hpp in Headers */,
+				42C7878A244F807000E42E33 /* ITask.hpp in Headers */,
 				42B942D32444EB7700C38BED /* PlatformManager.hpp in Headers */,
 				4220EB37244C66A40022BA31 /* Loader.hpp in Headers */,
 				42B942E32444EB8A00C38BED /* IObject.hpp in Headers */,
-				42B942E52444EB8A00C38BED /* TaskInterface.hpp in Headers */,
 				426A981C24476D27003E60EB /* PluginManager.hpp in Headers */,
 				42B942DB2444EB8500C38BED /* Game.hpp in Headers */,
 				42B942D72444EB8500C38BED /* RObject.hpp in Headers */,
@@ -619,12 +634,13 @@
 				42B942EA2444EB8E00C38BED /* StateManager.cpp in Sources */,
 				42B942D02444EB7700C38BED /* EnvironmentManager.cpp in Sources */,
 				4220EB36244C66A40022BA31 /* Loader.cpp in Sources */,
+				42C78784244F7A7300E42E33 /* IRObject.cpp in Sources */,
+				42C78789244F807000E42E33 /* ITask.cpp in Sources */,
 				42B942D62444EB8500C38BED /* RObject.cpp in Sources */,
-				42B942D82444EB8500C38BED /* IRScene.cpp in Sources */,
+				42B942D82444EB8500C38BED /* RScene.cpp in Sources */,
 				42B942DE2444EB8A00C38BED /* IPlugin.cpp in Sources */,
 				42B942E82444EB8E00C38BED /* Observer.cpp in Sources */,
 				42B942E22444EB8A00C38BED /* IObject.cpp in Sources */,
-				42B942E42444EB8A00C38BED /* TaskInterface.cpp in Sources */,
 				42B942DC2444EB8500C38BED /* Scheduler.cpp in Sources */,
 				42B942D22444EB7700C38BED /* PlatformManager.cpp in Sources */,
 				42B942E62444EB8E00C38BED /* Subject.cpp in Sources */,

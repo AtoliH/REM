@@ -8,8 +8,8 @@
 
 #include "Subject.hpp"
 
-Subject::Subject(): observed(true) {
-
+Subject::~Subject() {
+    
 }
 
 void Subject::setObserved(bool observed) {

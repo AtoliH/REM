@@ -9,20 +9,32 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "Loader.hpp"
-#include "IRScene.hpp"
+#include "RScene.hpp"
+#include "RObject.hpp"
 #include "ITestSystem.hpp"
 
 
-class MockRScene: public IRScene<ITestSystem1, ITestSystem1, ITestSystem1, ITestSystem1> {
+class MockRObject: public RObject<ITestSystem1, ITestSystem2> {
 public:
+    MockRObject(const Loader &loader): RObject<ITestSystem1, ITestSystem2>(loader) {
+        
+    }
+};
+
+class MockRScene: public RScene<ITestSystem1> {
+public:
+    MockRScene(Loader * loader): RScene<ITestSystem1>(loader) {
+        addObject<MockRObject>();
+    }
 };
 
 
 TEST(TestLoader, TestLoadScene) {
-    auto pluginManager = std::make_shared<PluginManager>();
-    auto platformManager = std::make_shared<PlatformManager>(pluginManager.get());
-    platformManager->load("libTestPlugin1.dylib");
-        
-    Loader loader(platformManager.get());
-    loader.load<MockRScene>();
+    PluginManager pluginManager;
+    PlatformManager platformManager(&pluginManager);
+    platformManager.load("libTestPlugin1.dylib");
+
+    Loader loader(&platformManager);
+    
+    MockRScene scene(&loader);
 }

@@ -9,7 +9,9 @@
 #ifndef TestSystem11_hpp
 #define TestSystem11_hpp
 
-#include "ITestSystem.hpp"
+#include <memory>
+#include "TestObject1.hpp"
+#include "TestScene1.hpp"
 
 class TestSystem11: public ITestSystem1 {
 public:
@@ -17,13 +19,12 @@ public:
         
     }
     
-    virtual IScene * createScene() override {
-        return NULL;
-        
+    virtual std::shared_ptr<IScene> createScene() override {
+        return std::static_pointer_cast<IScene>(std::make_shared<TestScene1>());
     }
     
-    virtual void destroyScene(IScene * scene) override {
-        
+    virtual std::shared_ptr<IObject> createObject() override {
+        return std::static_pointer_cast<IObject>(std::make_shared<TestObject1>());
     }
     
     virtual std::string test() override {
@@ -45,13 +46,13 @@ public:
         
     }
     
-    virtual IScene * createScene() override {
+    virtual std::shared_ptr<IScene> createScene() override {
         return NULL;
         
     }
     
-    virtual void destroyScene(IScene * scene) override {
-        
+    virtual std::shared_ptr<IObject> createObject() override {
+        return nullptr;
     }
     
     virtual std::string test() override {

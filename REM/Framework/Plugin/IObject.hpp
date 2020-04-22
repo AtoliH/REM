@@ -9,12 +9,15 @@
 #ifndef ObjectInterface_hpp
 #define ObjectInterface_hpp
 
-#include "Subject.hpp"
 
-class IObject: public Subject {
-    
-public:
+class IObject {
 
 };
+
+template <typename T>
+class Object: public IObject {
+    
+};
+
 
 #endif /* ObjectInterface_hpp */

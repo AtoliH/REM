@@ -7,6 +7,7 @@
 //
 
 #include "StateManager.hpp"
+#include "Observer.hpp"
 
 
 void StateManager::connect(Observer &observer, Subject &subject) {
@@ -27,20 +28,14 @@ void StateManager::update(Subject &subject, Observable observable, ObservableTyp
 }
 
 void StateManager::distributeUpdates() { 
-    while (!updates.empty()) {
-        auto &info = updates.front();
+    while (!newUpdates.empty()) {
+        auto &[subject, varID, newValue] = newUpdates.front();
         
-        auto observers = connections[info.subject];
-
-        std::for_each(observers.begin(), observers.end(), [info](Observer *observer){
-            try {
-                auto callback = (observer->getUpdateCallback(info.observable));
-                callback(info.value);
-            }
-            catch (const std::out_of_range) {
-                
-            }
+        auto &callbacks = newConnections[subject][varID];
+        std::for_each(callbacks.begin(), callbacks.end(), [&value = newValue](auto updateValue){
+            updateValue(value);
         });
-        updates.pop();
+        
+        newUpdates.pop();
     }
 }

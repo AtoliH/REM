@@ -12,19 +12,28 @@
 #include <vector>
 #include "Observable.h"
 #include "StateManager.hpp"
+#include "VarType.h"
 
-class Subject {
+
+class Subject: std::enable_shared_from_this<Subject> {
     bool observed;
-
-protected:
-    Subject();
     
+public:    
+    virtual ~Subject();
+    
+protected:
     void notify(Observable observable, ObservableType value) {
-        auto &cc = StateManager::instance();
-        cc.update(*this, observable, value);
+        // stateManager->update(*this, observable, value);
     }
     
     void setObserved(bool observed);
+    
+    template <typename S, typename T>
+    void expose(const VarType<S, T> &varType, NewObservable<T> &observable, StateManager &stateManager) {
+        observable.bind([this, &stateManager, &varType](T newValue) {
+            stateManager.update(this->weak_from_this(), varType, newValue);
+        });
+    }
 };
 
 #endif /* Subject_hpp */

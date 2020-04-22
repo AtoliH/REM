@@ -12,6 +12,38 @@
 #include <variant>
 
 
+template <typename T>
+class NewObservable {
+    T value;
+    std::function<void(T)> notifyCallback;
+    
+public:
+    constexpr NewObservable(): value(T()) {
+        
+    }
+    
+    constexpr NewObservable(T init): value(init) {
+        
+    }
+    
+    constexpr operator T() const {
+        return value;
+    }
+    
+    NewObservable& operator=(NewObservable arg) noexcept {
+        if (value != arg.value) {
+            if (notifyCallback)
+                notifyCallback(arg.value);
+        }
+        std::swap(value, arg.value);
+        return *this;
+    }
+    
+    void bind(std::function<void(T)> callback) {
+        notifyCallback = callback;
+    }
+};
+
 enum Observable {
     X,
     Y

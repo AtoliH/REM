@@ -10,13 +10,15 @@
 #define PluginInterface_hpp
 
 #include "IScene.hpp"
+#include "IObject.hpp"
 #include <string>
+
 
 class IPlugin {
     
 public:
-    virtual IScene * createScene() = 0;
-    virtual void destroyScene(IScene * scene) = 0;
+    virtual std::shared_ptr<IScene> createScene() = 0;
+    virtual std::shared_ptr<IObject> createObject() = 0;
     virtual ~IPlugin() {}
     
     virtual std::string test() = 0;

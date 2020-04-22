@@ -8,10 +8,6 @@
 
 #include "Loader.hpp"
 
-Loader::Loader(PlatformManager * platformManager): pluginLoader(platformManager) {
-    
-}
-
-Loader::PluginLoader::PluginLoader(PlatformManager * platformManager): platformManager(platformManager) {
+Loader::Loader(PlatformManager * platformManager): platformManager(platformManager) {
     
 }
