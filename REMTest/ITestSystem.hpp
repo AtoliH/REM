@@ -18,11 +18,17 @@ class ITestSystem1: public IPlugin {
 
 public:
     struct Var {
-        static constexpr VarType<ITestSystem1, float> x;
-        static constexpr VarType<ITestSystem1, float> y = 1;
-        static constexpr VarType<ITestSystem1, float> z = 2;
+        struct Scene {
+            static constexpr VarType<ITestSystem1, bool> state;
+        };
         
-        static constexpr VarType<ITestSystem1, int> i = 3;
+        struct Object {
+            static constexpr VarType<ITestSystem1, float> x;
+            static constexpr VarType<ITestSystem1, float> y = 1;
+            static constexpr VarType<ITestSystem1, float> z = 2;
+            
+            static constexpr VarType<ITestSystem1, int> i = 3;
+        };
     };
 };
 

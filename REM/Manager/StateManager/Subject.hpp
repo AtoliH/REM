@@ -15,21 +15,12 @@
 #include "VarType.h"
 
 
-class Subject: std::enable_shared_from_this<Subject> {
-    bool observed;
-    
-public:    
+class Subject: public std::enable_shared_from_this<Subject> {
+public:
     virtual ~Subject();
     
-protected:
-    void notify(Observable observable, ObservableType value) {
-        // stateManager->update(*this, observable, value);
-    }
-    
-    void setObserved(bool observed);
-    
     template <typename S, typename T>
-    void expose(const VarType<S, T> &varType, NewObservable<T> &observable, StateManager &stateManager) {
+    void expose(const VarType<S, T> &varType, Observable<T> &observable, StateManager &stateManager) const {
         observable.bind([this, &stateManager, &varType](T newValue) {
             stateManager.update(this->weak_from_this(), varType, newValue);
         });

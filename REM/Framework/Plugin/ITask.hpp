@@ -9,13 +9,9 @@
 #ifndef TaskInterface_hpp
 #define TaskInterface_hpp
 
-#include <tbb/task.h>
 
-class ITask {
-    
-    
-public:
-    
+class ITask{
+
 };
 
 #endif /* TaskInterface_hpp */

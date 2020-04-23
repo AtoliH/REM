@@ -12,8 +12,11 @@
 #include "ITestSystem.hpp"
 #include "IObject.hpp"
 
-class TestObject1: public Object<ITestSystem1> {
-    
+class TestObject1: public IObject {
+public:
+    TestObject1(StateManager * stateManager): IObject(stateManager) {
+        
+    }
 };
 
 #endif /* TestObject1_hpp */

@@ -9,6 +9,8 @@
 #ifndef TaskManager_hpp
 #define TaskManager_hpp
 
-#include <stdio.h>
+class TaskManager {
+    
+};
 
 #endif /* TaskManager_hpp */

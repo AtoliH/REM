@@ -17,8 +17,7 @@
 class IPlugin {
     
 public:
-    virtual std::shared_ptr<IScene> createScene() = 0;
-    virtual std::shared_ptr<IObject> createObject() = 0;
+    virtual std::shared_ptr<IScene> createScene() const = 0;
     virtual ~IPlugin() {}
     
     virtual std::string test() = 0;

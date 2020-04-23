@@ -11,14 +11,12 @@
 
 #include "Observer.hpp"
 #include "IObject.hpp"
+#include "Loader.hpp"
+#include "utils.h"
+
 
 class IRObject: public Subject, Observer {
-    std::vector<std::shared_ptr<IObject> > objects;
     
-protected:
-    void installObjects(std::vector<std::shared_ptr<IObject> > &&fetchedObjects) {
-        objects = fetchedObjects;
-    }
 };
 
 #endif /* IRObject_hpp */

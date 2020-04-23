@@ -11,15 +11,31 @@
 
 #include "Loader.hpp"
 #include "IRObject.hpp"
+#include "utils.h"
+#include <iostream>
+
 
 /**
  * Universal object that can communicate with managers.
  */
 template <class... Systems>
 class RObject: public IRObject {
+    std::vector<std::shared_ptr<IObject> > objects;
+
 public:
-    RObject(const Loader &loader) {
-        installObjects(loader.loadObjects<Systems...>());
+    RObject(detail::tupleOf<sizeof...(Systems), std::shared_ptr<IObject> > objects): IRObject() {
+        this->objects = std::apply([](auto&&... elems) {
+            std::vector<std::shared_ptr<IObject>> objects;
+            objects.reserve(sizeof...(elems));
+            (objects.push_back(elems), ...);
+            return objects;
+        }, objects);
+    }
+    
+protected:
+    template <class... ExtensionSystems>
+    void installExtensions(const Loader &loader) {
+        objects = loader.loadObjects<ExtensionSystems...>();
     }
 };
 

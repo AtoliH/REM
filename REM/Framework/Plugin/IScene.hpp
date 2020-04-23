@@ -9,9 +9,15 @@
 #ifndef SceneInterface_hpp
 #define SceneInterface_hpp
 
+#include <memory>
+#include "ITask.hpp"
+#include "IObject.hpp"
 
 class IScene{
-
+public:
+    virtual std::shared_ptr<IObject> createObject(StateManager * stateManager) = 0;
+    
+    virtual ITask * getTask() const = 0;
 };
 
 

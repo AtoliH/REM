@@ -6,35 +6,39 @@
 //  Copyright © 2020 Red Ember Mist. All rights reserved.
 //
 
+#include <utility>
+#include <iostream>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
+#include "Scheduler.hpp"
 #include "Loader.hpp"
 #include "RScene.hpp"
 #include "RObject.hpp"
 #include "ITestSystem.hpp"
+#include "StateManager.hpp"
 
 
-class MockRObject: public RObject<ITestSystem1, ITestSystem2> {
+/*class MockRObject: public RObject<ITestSystem1> {
 public:
-    MockRObject(const Loader &loader): RObject<ITestSystem1, ITestSystem2>(loader) {
+    MockRObject(const Loader &loader): RObject<ITestSystem1>(loader) {
         
     }
-};
+};*/
 
 class MockRScene: public RScene<ITestSystem1> {
 public:
-    MockRScene(Loader * loader): RScene<ITestSystem1>(loader) {
-        addObject<MockRObject>();
-    }
+    using RScene<ITestSystem1>::RScene;
 };
 
 
 TEST(TestLoader, TestLoadScene) {
     PluginManager pluginManager;
+    
     PlatformManager platformManager(&pluginManager);
     platformManager.load("libTestPlugin1.dylib");
+    
+    StateManager stateManager;
 
     Loader loader(&platformManager);
-    
-    MockRScene scene(&loader);
+    auto scene = loader.loadScene<MockRScene>(&stateManager);
 }

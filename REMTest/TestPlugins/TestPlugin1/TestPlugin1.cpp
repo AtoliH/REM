@@ -23,7 +23,7 @@ extern "C" PLUGIN_API void RP_initPlugin(const RP_PlatformInfo * info, void * pl
         info->registerClass(&testClass1, platformManager);
     }
     
-    {
+    /*{
         RP_PluginClassInfo testClass2 = {
             {2, 0, 0},
             TestSystem12::create,
@@ -32,5 +32,5 @@ extern "C" PLUGIN_API void RP_initPlugin(const RP_PlatformInfo * info, void * pl
         
         
         info->registerClass(&testClass2, platformManager);
-    }
+    }*/
 }

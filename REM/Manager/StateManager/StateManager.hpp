@@ -22,16 +22,7 @@
 class Subject;
 class Observer;
 
-class StateManager {    
-    struct UpdateInfo {
-        Subject *subject;
-        Observable observable;
-        ObservableType value;
-    };
-    
-    std::map<Subject*, std::vector<Observer*> > connections; // All the observables the observers are listening to
-    std::queue<UpdateInfo> updates;
-    
+class StateManager {
     struct change_hash : public std::unary_function<VarID, std::size_t>
     {
        std::size_t operator()(const VarID& k) const
@@ -39,27 +30,15 @@ class StateManager {
           return std::get<0>(k) ^ std::hash<int>()(std::get<1>(k));
        }
     };
-    std::map<std::weak_ptr<Subject>, std::unordered_map<VarID, std::list<std::function<void(std::any)>>, change_hash>, std::owner_less<>> newConnections;
-    std::queue<std::tuple<std::weak_ptr<Subject>, VarID, std::any>> newUpdates;
+    std::map<std::weak_ptr<Subject>, std::unordered_map<VarID, std::list<std::function<void(std::any)>>, change_hash>, std::owner_less<>> connections;
+    std::queue<std::tuple<std::weak_ptr<Subject>, VarID, std::any>> updates;
 
-public:
-    StateManager();
-    ~StateManager();
-    static StateManager &instance() {
-        static StateManager s;
-        return s;
-    }
-    
-    void connect(Observer &observer, Subject &subject); // Register an observer to a subject so that it can listen to the subject's changes
-    void disconnect(Observer &observer, Subject &subject); // Deregister...
-    
-    void update(Subject &subject, Observable observable, ObservableType value);
-    
+public:    
     void distributeUpdates();
     
     template <typename S, typename T>
     void connect(std::weak_ptr<Subject> subject, VarType<S, T> varType, std::function<bool(T)> notifyCallback) {
-        auto &callbackList = newConnections[subject][varType];
+        auto &callbackList = connections[subject][varType];
         callbackList.emplace_back();
         callbackList.back() = [selfIterator = std::prev(callbackList.end()), &notifyCallback, &callbackList](std::any newValue) {
             if(!notifyCallback(std::any_cast<T>(newValue)))
@@ -69,7 +48,7 @@ public:
     
     template <typename S, typename T>
     void update(std::weak_ptr<Subject> subject, VarType<S, T> varType, T newValue) {
-        newUpdates.push(std::make_pair(subject, varType, newValue));
+        updates.push(std::make_pair(subject, varType, newValue));
     }
 };
 

@@ -13,16 +13,16 @@
 
 
 template <typename T>
-class NewObservable {
+class Observable {
     T value;
     std::function<void(T)> notifyCallback;
     
 public:
-    constexpr NewObservable(): value(T()) {
+    constexpr Observable(): value(T()) {
         
     }
     
-    constexpr NewObservable(T init): value(init) {
+    constexpr Observable(T init): value(init) {
         
     }
     
@@ -30,7 +30,7 @@ public:
         return value;
     }
     
-    NewObservable& operator=(NewObservable arg) noexcept {
+    Observable& operator=(Observable arg) noexcept {
         if (value != arg.value) {
             if (notifyCallback)
                 notifyCallback(arg.value);
@@ -43,12 +43,5 @@ public:
         notifyCallback = callback;
     }
 };
-
-enum Observable {
-    X,
-    Y
-};
-
-typedef std::variant<int> ObservableType;
 
 #endif /* Observable_h */

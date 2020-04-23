@@ -10,32 +10,15 @@
 #include "Observer.hpp"
 
 
-void StateManager::connect(Observer &observer, Subject &subject) {
-    connections[&subject].push_back(&observer);
-}
-
-void StateManager::disconnect(Observer &observer, Subject &subject) {
-    auto &observers = connections[&subject];
-    observers.erase(std::remove(observers.begin(), observers.end(), &observer), observers.end());
-    
-    if (observers.empty()) {
-        connections.erase(&subject);
-    }
-}
-
-void StateManager::update(Subject &subject, Observable observable, ObservableType value) {
-    updates.push({&subject, observable, value});
-}
-
 void StateManager::distributeUpdates() { 
-    while (!newUpdates.empty()) {
-        auto &[subject, varID, newValue] = newUpdates.front();
+    while (!updates.empty()) {
+        auto &[subject, varID, newValue] = updates.front();
         
-        auto &callbacks = newConnections[subject][varID];
+        auto &callbacks = connections[subject][varID];
         std::for_each(callbacks.begin(), callbacks.end(), [&value = newValue](auto updateValue){
             updateValue(value);
         });
         
-        newUpdates.pop();
+        updates.pop();
     }
 }

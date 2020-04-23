@@ -11,9 +11,17 @@
 
 #include "ITestSystem.hpp"
 #include "IScene.hpp"
+#include "TestTask1.hpp"
 
-class TestScene1: public Scene<ITestSystem1> {
+class TestScene1: public IScene {
+public:
+    ITask * getTask() const override {
+        return nullptr;
+    }
     
+    std::shared_ptr<IObject> createObject(StateManager * stateManager) override {
+        return std::make_shared<TestObject1>(stateManager);
+    }
 };
 
 #endif /* TestScene1_hpp */

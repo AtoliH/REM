@@ -7,3 +7,8 @@
 //
 
 #include "IObject.hpp"
+
+
+IObject::IObject(StateManager * stateManager): stateManager(stateManager) {
+    
+}

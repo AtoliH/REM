@@ -19,12 +19,8 @@ public:
         
     }
     
-    virtual std::shared_ptr<IScene> createScene() override {
+    virtual std::shared_ptr<IScene> createScene() const override {
         return std::static_pointer_cast<IScene>(std::make_shared<TestScene1>());
-    }
-    
-    virtual std::shared_ptr<IObject> createObject() override {
-        return std::static_pointer_cast<IObject>(std::make_shared<TestObject1>());
     }
     
     virtual std::string test() override {
@@ -40,18 +36,18 @@ public:
     }
 };
 
-class TestSystem12: public ITestSystem1 {
+/*class TestSystem12: public ITestSystem1 {
 public:
     virtual ~TestSystem12() override {
         
     }
     
-    virtual std::shared_ptr<IScene> createScene() override {
+    virtual std::shared_ptr<IScene> createScene() const override {
         return NULL;
         
     }
     
-    virtual std::shared_ptr<IObject> createObject() override {
+    virtual std::shared_ptr<IObject> createObject() const override {
         return nullptr;
     }
     
@@ -66,6 +62,6 @@ public:
     static void destroy(IPlugin * plugin) {
         delete plugin;
     }
-};
+};*/
 
 #endif /* TestSystem11_hpp */

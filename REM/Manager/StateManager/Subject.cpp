@@ -11,7 +11,3 @@
 Subject::~Subject() {
     
 }
-
-void Subject::setObserved(bool observed) {
-    this->observed = observed;
-}

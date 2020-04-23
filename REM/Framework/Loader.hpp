@@ -13,25 +13,52 @@
 #include <type_traits>
 #include <tuple>
 #include "PlatformManager.hpp"
+#include "utils.h"
 
 
 class Loader {
     PlatformManager * platformManager;
 
-    template <class GPlugin, class ...GPlugins>
-    std::tuple<std::shared_ptr<GPlugin>, std::shared_ptr<GPlugins>...> fetchPlugins() const {
+    template <typename F, class GPlugin, class ...GPlugins>
+    static constexpr auto fetchPlugins(PlatformManager &platformManager, F f) {
         // TODO: Static assert
         
-        auto plugin = std::make_tuple(platformManager->fetchPlugin<GPlugin>());
+        auto result = std::make_tuple(f(platformManager.fetchPlugin<GPlugin>()));
         
         if constexpr(sizeof...(GPlugins) > 0)
-            return std::tuple_cat(plugin, fetchPlugins<GPlugins...>());
+            return std::tuple_cat(result, fetchPlugins<F, GPlugins...>(platformManager, f));
         else
-            return plugin;
+            return result;
+    }
+    
+    template <typename F, typename... Plugins>
+    struct pluginFetchFunction {
+        static constexpr auto value = fetchPlugins<F, Plugins...>;
+    };
+
+    template<typename F, template <typename...> typename Scene, typename... Plugins>
+    constexpr auto extractPluginsFetchFunctions(const Scene<Plugins...>&) -> pluginFetchFunction<F, Plugins...>;
+
+    template<typename Scene>
+    auto fetchPluginScenes() {
+        auto f = [](const auto &plugin){
+            return plugin->createScene();
+        };
+        return decltype(extractPluginsFetchFunctions<decltype(f)>(std::declval<Scene>()))::value(*platformManager, f);
     }
     
 public:
     Loader(PlatformManager * platformManager);
+    
+    template <class Scene>
+    Scene loadScene(StateManager * stateManager) {
+        return Scene(stateManager, fetchPluginScenes<Scene>());
+    }
+    
+    template <class Object>
+    Object loadObject() {
+        // return Object(fetchPluginObjects<Object>());
+    }
     
     template <class ...Systems>
     auto loadScenes() const {
