@@ -17,22 +17,13 @@
 		4220EB49244CC9AD0022BA31 /* TestPlugin1Priv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4220EB48244CC9AD0022BA31 /* TestPlugin1Priv.hpp */; };
 		4220EB4B244CC9AD0022BA31 /* TestPlugin1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4220EB4A244CC9AD0022BA31 /* TestPlugin1.cpp */; };
 		4245671A244CCD3A0090280F /* TestSystem1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42456718244CCD3A0090280F /* TestSystem1.hpp */; };
-		425EA84D244D188600E6DCC0 /* TestSystem21.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425EA846244D188600E6DCC0 /* TestSystem21.cpp */; };
-		425EA84E244D188600E6DCC0 /* TestSystem21.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 425EA847244D188600E6DCC0 /* TestSystem21.hpp */; };
-		425EA84F244D188600E6DCC0 /* TestPlugin1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425EA848244D188600E6DCC0 /* TestPlugin1.cpp */; };
-		425EA850244D188600E6DCC0 /* TestPlugin1Priv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 425EA849244D188600E6DCC0 /* TestPlugin1Priv.hpp */; };
-		425EA851244D188600E6DCC0 /* TestSystem22.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 425EA84A244D188600E6DCC0 /* TestSystem22.hpp */; };
-		425EA852244D188600E6DCC0 /* TestSystem22.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 425EA84B244D188600E6DCC0 /* TestSystem22.cpp */; };
-		425EA853244D188600E6DCC0 /* TestPlugin1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 425EA84C244D188600E6DCC0 /* TestPlugin1.hpp */; };
-		426773C2244D093400FC369C /* TestPlugin2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426773C1244D093400FC369C /* TestPlugin2.hpp */; };
-		426773C4244D093400FC369C /* TestPlugin2Priv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426773C3244D093400FC369C /* TestPlugin2Priv.hpp */; };
-		426773C6244D093400FC369C /* TestPlugin2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426773C5244D093400FC369C /* TestPlugin2.cpp */; };
 		426A98172447660E003E60EB /* DynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426A98152447660E003E60EB /* DynamicLibrary.cpp */; };
 		426A98182447660E003E60EB /* DynamicLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426A98162447660E003E60EB /* DynamicLibrary.hpp */; };
 		426A981B24476D27003E60EB /* PluginManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426A981924476D27003E60EB /* PluginManager.cpp */; };
 		426A981C24476D27003E60EB /* PluginManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426A981A24476D27003E60EB /* PluginManager.hpp */; };
 		427CF8A62451989200A69CC0 /* libtbb.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CF8A52451989200A69CC0 /* libtbb.dylib */; };
 		427CF8AB24523DF100A69CC0 /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
+		427CF8AD2452CE7700A69CC0 /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 427CF8AC2452CE7700A69CC0 /* gtest-all.cc */; };
 		42B942D02444EB7700C38BED /* EnvironmentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E195241511CC00BD17FF /* EnvironmentManager.cpp */; };
 		42B942D12444EB7700C38BED /* EnvironmentManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42A4E196241511CC00BD17FF /* EnvironmentManager.hpp */; };
 		42B942D22444EB7700C38BED /* PlatformManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E1982415140F00BD17FF /* PlatformManager.cpp */; };
@@ -58,7 +49,6 @@
 		42B942EA2444EB8E00C38BED /* StateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F34743240D57EC00915D1E /* StateManager.cpp */; };
 		42B942EB2444EB8E00C38BED /* StateManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42F34744240D57EC00915D1E /* StateManager.hpp */; };
 		42B942F32444EED900C38BED /* REMTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B942F22444EED900C38BED /* REMTest.cpp */; };
-		42B94314244524B000C38BED /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 42B943042445243E00C38BED /* gtest-all.cc */; };
 		42B943D224452D6600C38BED /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
 		42C78784244F7A7300E42E33 /* IRObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C78782244F7A7300E42E33 /* IRObject.cpp */; };
 		42C78785244F7A7300E42E33 /* IRObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C78783244F7A7300E42E33 /* IRObject.hpp */; };
@@ -123,17 +113,13 @@
 		425EA857244DE15500E6DCC0 /* ITestSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ITestSystem.hpp; path = REMTest/ITestSystem.hpp; sourceTree = SOURCE_ROOT; };
 		425EC4B1229FE0CD008894BB /* RObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RObject.cpp; sourceTree = "<group>"; };
 		425EC4B2229FE0CD008894BB /* RObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RObject.hpp; sourceTree = "<group>"; };
-		426773BF244D093400FC369C /* libTestPlugin2.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libTestPlugin2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		426773C1244D093400FC369C /* TestPlugin2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin2.hpp; sourceTree = "<group>"; };
-		426773C3244D093400FC369C /* TestPlugin2Priv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin2Priv.hpp; sourceTree = "<group>"; };
-		426773C5244D093400FC369C /* TestPlugin2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestPlugin2.cpp; sourceTree = "<group>"; };
 		426A98152447660E003E60EB /* DynamicLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicLibrary.cpp; sourceTree = "<group>"; };
 		426A98162447660E003E60EB /* DynamicLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicLibrary.hpp; sourceTree = "<group>"; };
 		426A981924476D27003E60EB /* PluginManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PluginManager.cpp; sourceTree = "<group>"; };
 		426A981A24476D27003E60EB /* PluginManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PluginManager.hpp; sourceTree = "<group>"; };
-		427CF8A32451961B00A69CC0 /* libtbb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtbb.a; path = ../../../../../../usr/local/Cellar/tbb/2020_U2/lib/libtbb.a; sourceTree = "<group>"; };
 		427CF8A52451989200A69CC0 /* libtbb.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtbb.dylib; path = ../../../../../../usr/local/Cellar/tbb/2020_U2/lib/libtbb.dylib; sourceTree = "<group>"; };
 		427CF8AA24521D2500A69CC0 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		427CF8AC2452CE7700A69CC0 /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "ThirdParty/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
 		42A4E1892413FF2600BD17FF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		42A4E18A2413FF2600BD17FF /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		42A4E18C24140BB300BD17FF /* Scheduler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
@@ -146,7 +132,6 @@
 		42B942B52444EAF400C38BED /* libREM.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libREM.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B942F02444EED900C38BED /* REMTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = REMTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B942F22444EED900C38BED /* REMTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = REMTest.cpp; sourceTree = "<group>"; };
-		42B943042445243E00C38BED /* gtest-all.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "gtest-all.cc"; sourceTree = "<group>"; };
 		42B943092445247600C38BED /* libgtest.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgtest.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C78782244F7A7300E42E33 /* IRObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRObject.cpp; sourceTree = "<group>"; };
 		42C78783244F7A7300E42E33 /* IRObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRObject.hpp; sourceTree = "<group>"; };
@@ -181,13 +166,6 @@
 			files = (
 				427CF8AB24523DF100A69CC0 /* libREM.dylib in Frameworks */,
 				427CF8A62451989200A69CC0 /* libtbb.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		426773BD244D093400FC369C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				427CF8A52451989200A69CC0 /* libtbb.dylib */,
-				427CF8A32451961B00A69CC0 /* libtbb.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,16 +287,6 @@
 			path = TestPlugin2;
 			sourceTree = "<group>";
 		};
-		426773C0244D093400FC369C /* TestPlugin2 */ = {
-			isa = PBXGroup;
-			children = (
-				426773C1244D093400FC369C /* TestPlugin2.hpp */,
-				426773C3244D093400FC369C /* TestPlugin2Priv.hpp */,
-				426773C5244D093400FC369C /* TestPlugin2.cpp */,
-			);
-			path = TestPlugin2;
-			sourceTree = "<group>";
-		};
 		426A9814244765F4003E60EB /* PlatformManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +323,7 @@
 		42B94303244523DD00C38BED /* GoogleTest */ = {
 			isa = PBXGroup;
 			children = (
-				42B943042445243E00C38BED /* gtest-all.cc */,
+				427CF8AC2452CE7700A69CC0 /* gtest-all.cc */,
 				4220EB3C244CBD4B0022BA31 /* gmock-all.cc */,
 			);
 			path = GoogleTest;
@@ -393,7 +360,6 @@
 				42C3D38724156CF3008B7DF4 /* BasePlugins */,
 				42F81572229F0D5600BC38AD /* REM */,
 				42B942F12444EED900C38BED /* REMTest */,
-				426773C0244D093400FC369C /* TestPlugin2 */,
 				42B94303244523DD00C38BED /* GoogleTest */,
 				424CE68B23CE190C00E7CC2D /* Frameworks */,
 				42F81571229F0D5600BC38AD /* Products */,
@@ -407,7 +373,6 @@
 				42B942F02444EED900C38BED /* REMTest */,
 				42B943092445247600C38BED /* libgtest.dylib */,
 				4220EB44244CC9AD0022BA31 /* libTestPlugin1.dylib */,
-				426773BF244D093400FC369C /* libTestPlugin2.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,19 +400,6 @@
 				4220EB47244CC9AD0022BA31 /* TestPlugin1.hpp in Headers */,
 				42C78794245094CF00E42E33 /* TestScene1.hpp in Headers */,
 				42C7879C2450F5AF00E42E33 /* TestTask1.hpp in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		426773BB244D093400FC369C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				426773C2244D093400FC369C /* TestPlugin2.hpp in Headers */,
-				425EA84E244D188600E6DCC0 /* TestSystem21.hpp in Headers */,
-				425EA850244D188600E6DCC0 /* TestPlugin1Priv.hpp in Headers */,
-				426773C4244D093400FC369C /* TestPlugin2Priv.hpp in Headers */,
-				425EA851244D188600E6DCC0 /* TestSystem22.hpp in Headers */,
-				425EA853244D188600E6DCC0 /* TestPlugin1.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,23 +453,6 @@
 			name = TestPlugin1;
 			productName = TestPlugin1;
 			productReference = 4220EB44244CC9AD0022BA31 /* libTestPlugin1.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		426773BE244D093400FC369C /* TestPlugin2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 426773C7244D093400FC369C /* Build configuration list for PBXNativeTarget "TestPlugin2" */;
-			buildPhases = (
-				426773BB244D093400FC369C /* Headers */,
-				426773BC244D093400FC369C /* Sources */,
-				426773BD244D093400FC369C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TestPlugin2;
-			productName = TestPlugin2;
-			productReference = 426773BF244D093400FC369C /* libTestPlugin2.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		42B942B42444EAF400C38BED /* REM */ = {
@@ -584,9 +519,6 @@
 					4220EB43244CC9AD0022BA31 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					426773BE244D093400FC369C = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					42B942B42444EAF400C38BED = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -621,7 +553,6 @@
 				42B942EF2444EED900C38BED /* REMTest */,
 				42B943082445247600C38BED /* gtest */,
 				4220EB43244CC9AD0022BA31 /* TestPlugin1 */,
-				426773BE244D093400FC369C /* TestPlugin2 */,
 			);
 		};
 /* End PBXProject section */
@@ -642,17 +573,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4220EB4B244CC9AD0022BA31 /* TestPlugin1.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		426773BC244D093400FC369C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				426773C6244D093400FC369C /* TestPlugin2.cpp in Sources */,
-				425EA84D244D188600E6DCC0 /* TestSystem21.cpp in Sources */,
-				425EA852244D188600E6DCC0 /* TestSystem22.cpp in Sources */,
-				425EA84F244D188600E6DCC0 /* TestPlugin1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,8 +615,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B94314244524B000C38BED /* gtest-all.cc in Sources */,
 				4220EB3D244CBD4B0022BA31 /* gmock-all.cc in Sources */,
+				427CF8AD2452CE7700A69CC0 /* gtest-all.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,42 +676,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Release;
-		};
-		426773C8244D093400FC369C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 62HVCAE3S2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		426773C9244D093400FC369C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 62HVCAE3S2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1056,15 +940,6 @@
 			buildConfigurations = (
 				4220EB4D244CC9AD0022BA31 /* Debug */,
 				4220EB4E244CC9AD0022BA31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		426773C7244D093400FC369C /* Build configuration list for PBXNativeTarget "TestPlugin2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				426773C8244D093400FC369C /* Debug */,
-				426773C9244D093400FC369C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

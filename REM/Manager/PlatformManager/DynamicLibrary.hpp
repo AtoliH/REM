@@ -9,9 +9,21 @@
 #ifndef DynamicLibrary_hpp
 #define DynamicLibrary_hpp
 
+#ifdef _WIN32
+#   include <windows.h>
+#else
+#   include <dlfcn.h>
+#endif
+
 #include <string>
 
 class DynamicLibrary {
+#ifdef _WIN32
+    HINSTANCE handle;
+#else
+    void * handle;
+#endif
+    
 public:
     DynamicLibrary(const std::string &path);
     ~DynamicLibrary();
@@ -21,8 +33,6 @@ private:
     DynamicLibrary();
     DynamicLibrary(void *handle);
     DynamicLibrary(const DynamicLibrary &);
-
-    void * handle;
 };
 
 #endif /* DynamicLibrary_hpp */

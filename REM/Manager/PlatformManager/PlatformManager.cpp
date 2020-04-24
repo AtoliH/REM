@@ -14,5 +14,5 @@
 PlatformManager::PlatformManager(PluginManager * pluginManager): pluginManager(pluginManager) {}
 
 void PlatformManager::load(const std::string &path){
-       pluginManager->load(path);
-   }
+    pluginManager->load(path);
+}

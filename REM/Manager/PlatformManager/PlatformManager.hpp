@@ -13,8 +13,8 @@
 #include <string>
 #include <vector>
 #include <tuple>
-
 #include "PluginManager.hpp"
+
 
 class PlatformManager {
     PluginManager * pluginManager;
@@ -23,7 +23,7 @@ public:
     PlatformManager(PluginManager * pluginManager);
     
     void load(const std::string &path);
-    
+        
     template <class T>
     std::shared_ptr<T> fetchPlugin() {
         // TODO: Static assert

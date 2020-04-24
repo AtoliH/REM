@@ -18,8 +18,10 @@
 #include <vector>
 #include <typeindex>
 #include "DynamicLibrary.hpp"
-#include "Plugin.h"
-#include "IPlugin.hpp"
+
+class PluginManager;
+class IPlugin;
+typedef void (*RP_InitFunction)(PluginManager &pluginManager);
 
 
 class PluginManager {
@@ -30,14 +32,14 @@ class PluginManager {
     DynamicLibraryMap dynamicLibraryMap;
     PluginVector plugins;
     PluginMap pluginsIndexed;
-    RP_PlatformInfo platformInfo;
 
 public:
     PluginManager();
     
     void load(const std::string &path);
-    int registerClass(const RP_PluginClassInfo * pluginInfo);
     
+    void registerPlugin(std::shared_ptr<IPlugin> plugin);
+        
     template <class T>
     std::shared_ptr<T> fetchPlugin() {
         try {

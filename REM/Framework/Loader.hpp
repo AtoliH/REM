@@ -13,6 +13,8 @@
 #include <type_traits>
 #include <tuple>
 #include "PlatformManager.hpp"
+#include "StateManager.hpp"
+#include "IScene.hpp"
 #include "utils.h"
 
 

@@ -13,24 +13,6 @@
 #include "TestSystem1.hpp"
 
 
-extern "C" PLUGIN_API void RP_initPlugin(const RP_PlatformInfo * info, void * platformManager) {
-    {
-        RP_PluginClassInfo testClass1 = {
-            {1, 0, 0},
-            TestSystem11::create,
-            TestSystem11::destroy
-        };
-        info->registerClass(&testClass1, platformManager);
-    }
-    
-    /*{
-        RP_PluginClassInfo testClass2 = {
-            {2, 0, 0},
-            TestSystem12::create,
-            TestSystem12::destroy
-        };
-        
-        
-        info->registerClass(&testClass2, platformManager);
-    }*/
+PLUGIN RP_initPlugin(PluginManager &pluginManager) {
+    pluginManager.registerPlugin(std::make_shared<TestSystem11>());
 }

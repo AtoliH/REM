@@ -19,11 +19,6 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>TestPlugin2.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>gtest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -37,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4220EB43244CC9AD0022BA31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>42B9427C2444DEB900C38BED</key>
 		<dict>
 			<key>primary</key>
