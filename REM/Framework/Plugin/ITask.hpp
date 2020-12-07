@@ -11,7 +11,8 @@
 
 
 class ITask{
-
+public:
+    virtual void execute() const = 0;
 };
 
 #endif /* TaskInterface_hpp */

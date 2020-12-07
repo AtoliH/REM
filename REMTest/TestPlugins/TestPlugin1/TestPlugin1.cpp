@@ -12,6 +12,7 @@
 #include "TestPlugin1Priv.hpp"
 #include "TestSystem1.hpp"
 
+#include "TestPlugin1.hpp"
 
 PLUGIN RP_initPlugin(PluginManager &pluginManager) {
     pluginManager.registerPlugin(std::make_shared<TestSystem11>());

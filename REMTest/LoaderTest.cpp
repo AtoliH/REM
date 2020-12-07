@@ -32,13 +32,5 @@ public:
 
 
 TEST(TestLoader, TestLoadScene) {
-    PluginManager pluginManager;
     
-    PlatformManager platformManager(&pluginManager);
-    platformManager.load("libTestPlugin1.dylib");
-    
-    StateManager stateManager;
-
-    Loader loader(&platformManager);
-    auto scene = loader.loadScene<MockRScene>(&stateManager);
 }

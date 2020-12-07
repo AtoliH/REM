@@ -19,8 +19,6 @@ class IPlugin {
 public:
     virtual std::shared_ptr<IScene> createScene() const = 0;
     virtual ~IPlugin() {}
-    
-    virtual std::string test() = 0;
 };
 
 #endif /* PluginInterface_hpp */

@@ -35,8 +35,8 @@ public:
         }, scenes);
     }
     
-    std::vector<ITask *> getTasks() const {
-        std::vector<ITask *> tasks;
+    std::vector<std::shared_ptr<ITask> > getTasks() const {
+        std::vector<std::shared_ptr<ITask> > tasks;
         std::for_each(scenes.begin(), scenes.end(), [&tasks](const std::shared_ptr<IScene> &scene) {
             tasks.push_back(scene->getTask());
         });
@@ -85,7 +85,7 @@ public:
         static_assert(systemsAreAvailable<ObjectSystems...>::value, "An underlying RObject cannot implement Systems that aren't available in the RScene.");
         // static_assert(std::is_base_of<RObject<ObjectSystems...>, O>::value, "The given RObject doesn't implement the right Systems.");
         
-        objects.push_back(std::static_pointer_cast<IRObject>(std::make_shared<RObject<ObjectSystems...> >(loadObjects<ObjectSystems...>())));
+        objects.push_back(std::make_shared<RObject<ObjectSystems...> >(loadObjects<ObjectSystems...>()));
     }
 };
 

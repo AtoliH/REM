@@ -7,14 +7,18 @@
 //
 
 #include "Game.hpp"
+#include "IBlankSystem.hpp"
 
 
-Game::Game() {
+Game::Game(): platformManager(&pluginManager), loader(&platformManager) {
+    platformManager.load("libBlank.dylib");
     
+    auto scene = loader.loadScene<RScene<IBlankSystem>>(&stateManager);
+    
+    scheduler.setScene(scene);
 }
 
 int Game::run() {
-    
     
     // - Process window messages
     
@@ -27,6 +31,8 @@ int Game::run() {
     
     // - Check execution status (run, stop, pause...)
     
+    // Temporary run only 1 tick
+    scheduler.runTasks();
     
     return 0;
 }

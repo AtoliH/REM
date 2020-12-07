@@ -15,11 +15,11 @@
 
 class TestScene1: public IScene {
 public:
-    ITask * getTask() const override {
-        return nullptr;
+    std::shared_ptr<ITask> getTask() const override {
+        return std::make_shared<TestTask1>();
     }
     
-    std::shared_ptr<IObject> createObject(StateManager * stateManager) override {
+    std::shared_ptr<IObject> createObject(StateManager * stateManager) const override {
         return std::make_shared<TestObject1>(stateManager);
     }
 };

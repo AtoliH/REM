@@ -15,9 +15,12 @@
 
 class IScene{
 public:
-    virtual std::shared_ptr<IObject> createObject(StateManager * stateManager) = 0;
+    virtual std::shared_ptr<IObject> createObject(StateManager * stateManager) const = 0;
     
-    virtual ITask * getTask() const = 0;
+    /**
+     * The system scene's initialization task.
+     */
+    virtual std::shared_ptr<ITask> getTask() const = 0;
 };
 
 

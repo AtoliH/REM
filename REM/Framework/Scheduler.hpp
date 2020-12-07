@@ -13,24 +13,39 @@
 #include <tbb/task_group.h>
 #include "RScene.hpp"
 
+
 /**
- * Decides witch systems to execute during each clock cycle.
+ * Decides which systems to execute during each clock cycle.
  * Must make sure each sytem has time to execute in 1 tick.
  */
 template <class... Systems>
 class Scheduler {
+    std::shared_ptr<RScene<Systems...> > scene;
     
 public:
-    Scheduler(const RScene<Systems...> &stage) {
-        
+    /**
+     * TODO: mechanism to make sure scene doesn't remain null
+     */
+    Scheduler(std::shared_ptr<RScene<Systems...> > scene = nullptr) {
+        this->scene = scene;
     }
-              
+    
+    void setScene(std::shared_ptr<RScene<Systems...> > scene) {
+        this->scene = scene;
+    }
     
     /**
-     * Schedule tasks and send them to task manager.
+     * Schedule scene tasks and send them to task manager then wait for them to finish.
      */
     void runTasks() {
+        auto tasks = scene->getTasks();
         
+        tbb::task_group g;
+        std::for_each(tasks.begin(), tasks.end(), [&g](const std::shared_ptr<ITask> &task){
+            g.run([&task]() { task->execute(); });
+        });
+        
+        g.wait();
     }
 };
 

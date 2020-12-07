@@ -22,10 +22,6 @@ public:
     std::shared_ptr<IScene> createScene() const override {
         return std::static_pointer_cast<IScene>(std::make_shared<TestScene1>());
     }
-    
-    std::string test() override {
-        return "string from 11";
-    }
 };
 
 #endif /* TestSystem11_hpp */

@@ -31,12 +31,6 @@ public:
             return objects;
         }, objects);
     }
-    
-protected:
-    template <class... ExtensionSystems>
-    void installExtensions(const Loader &loader) {
-        objects = loader.loadObjects<ExtensionSystems...>();
-    }
 };
 
 

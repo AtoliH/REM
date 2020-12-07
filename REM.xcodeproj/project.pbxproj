@@ -21,9 +21,37 @@
 		426A98182447660E003E60EB /* DynamicLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426A98162447660E003E60EB /* DynamicLibrary.hpp */; };
 		426A981B24476D27003E60EB /* PluginManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426A981924476D27003E60EB /* PluginManager.cpp */; };
 		426A981C24476D27003E60EB /* PluginManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426A981A24476D27003E60EB /* PluginManager.hpp */; };
-		427CF8A62451989200A69CC0 /* libtbb.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CF8A52451989200A69CC0 /* libtbb.dylib */; };
+		4278794E245372E000AD5B70 /* BlankObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 427879442453712D00AD5B70 /* BlankObject.cpp */; };
+		4278794F245372E000AD5B70 /* BlankObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793624536D7400AD5B70 /* BlankObject.hpp */; };
+		42787950245372E000AD5B70 /* BlankPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4278793524536D7400AD5B70 /* BlankPlugin.cpp */; };
+		42787951245372E000AD5B70 /* BlankPlugin.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793824536D7400AD5B70 /* BlankPlugin.hpp */; };
+		42787952245372E000AD5B70 /* BlankPluginPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793924536D7500AD5B70 /* BlankPluginPriv.hpp */; };
+		42787953245372E000AD5B70 /* BlankScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42787946245371A300AD5B70 /* BlankScene.cpp */; };
+		42787954245372E000AD5B70 /* BlankScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793A24536D7500AD5B70 /* BlankScene.hpp */; };
+		42787955245372E000AD5B70 /* BlankSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 427879482453721700AD5B70 /* BlankSystem.cpp */; };
+		42787956245372E000AD5B70 /* BlankSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793724536D7400AD5B70 /* BlankSystem.hpp */; };
+		42787957245372E000AD5B70 /* BlankTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4278794A2453728900AD5B70 /* BlankTask.cpp */; };
+		42787958245372E000AD5B70 /* BlankTask.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278793424536D7400AD5B70 /* BlankTask.hpp */; };
+		42787959245372E000AD5B70 /* IBlankSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4278794C245372CE00AD5B70 /* IBlankSystem.hpp */; };
 		427CF8AB24523DF100A69CC0 /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
 		427CF8AD2452CE7700A69CC0 /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 427CF8AC2452CE7700A69CC0 /* gtest-all.cc */; };
+		4299FBA3245B1CE700BF45DD /* input.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FBA2245B1CE700BF45DD /* input.hpp */; };
+		4299FBA5245B1CE700BF45DD /* inputPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FBA4245B1CE700BF45DD /* inputPriv.hpp */; };
+		4299FBA7245B1CE700BF45DD /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FBA6245B1CE700BF45DD /* input.cpp */; };
+		4299FBAB245B1CF400BF45DD /* InputPluginPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB8F245B1CC000BF45DD /* InputPluginPriv.hpp */; };
+		4299FBAC245B1CF400BF45DD /* InputSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FB90245B1CC000BF45DD /* InputSystem.cpp */; };
+		4299FBAD245B1CF400BF45DD /* InputObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB91245B1CC000BF45DD /* InputObject.hpp */; };
+		4299FBAE245B1CF400BF45DD /* InputTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FB92245B1CC000BF45DD /* InputTask.cpp */; };
+		4299FBAF245B1CF400BF45DD /* InputScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FB93245B1CC000BF45DD /* InputScene.cpp */; };
+		4299FBB0245B1CF400BF45DD /* InputPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FB94245B1CC000BF45DD /* InputPlugin.cpp */; };
+		4299FBB1245B1CF400BF45DD /* InputSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB95245B1CC000BF45DD /* InputSystem.hpp */; };
+		4299FBB2245B1CF400BF45DD /* InputObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4299FB96245B1CC000BF45DD /* InputObject.cpp */; };
+		4299FBB3245B1CF400BF45DD /* InputTask.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB97245B1CC000BF45DD /* InputTask.hpp */; };
+		4299FBB4245B1CF400BF45DD /* InputScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB98245B1CC000BF45DD /* InputScene.hpp */; };
+		4299FBB5245B1CF400BF45DD /* InputPlugin.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB99245B1CC000BF45DD /* InputPlugin.hpp */; };
+		4299FBB6245B1CF400BF45DD /* IInputSystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4299FB9A245B1CC000BF45DD /* IInputSystem.hpp */; };
+		4299FBB7245B1DCA00BF45DD /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
+		42A443DE24535FA800A849D7 /* libREM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B942B52444EAF400C38BED /* libREM.dylib */; };
 		42B942D02444EB7700C38BED /* EnvironmentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E195241511CC00BD17FF /* EnvironmentManager.cpp */; };
 		42B942D12444EB7700C38BED /* EnvironmentManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42A4E196241511CC00BD17FF /* EnvironmentManager.hpp */; };
 		42B942D22444EB7700C38BED /* PlatformManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A4E1982415140F00BD17FF /* PlatformManager.cpp */; };
@@ -59,15 +87,16 @@
 		42C787972450E55900E42E33 /* TaskManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C787952450E55900E42E33 /* TaskManager.cpp */; };
 		42C787982450E55900E42E33 /* TaskManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C787962450E55900E42E33 /* TaskManager.hpp */; };
 		42C7879C2450F5AF00E42E33 /* TestTask1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42C7879A2450F5AF00E42E33 /* TestTask1.hpp */; };
+		42C7BEFD245307A700A32040 /* libtbb.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CF8A52451989200A69CC0 /* libtbb.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		427CF8A724519F8E00A69CC0 /* PBXContainerItemProxy */ = {
+		42787932245366EF00AD5B70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42F81568229F0D5600BC38AD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4220EB43244CC9AD0022BA31;
-			remoteInfo = TestPlugin1;
+			remoteGlobalIDString = 42A443C424535F1200A849D7;
+			remoteInfo = Blank;
 		};
 		42B942652444D3FF00C38BED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -117,9 +146,39 @@
 		426A98162447660E003E60EB /* DynamicLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicLibrary.hpp; sourceTree = "<group>"; };
 		426A981924476D27003E60EB /* PluginManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PluginManager.cpp; sourceTree = "<group>"; };
 		426A981A24476D27003E60EB /* PluginManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PluginManager.hpp; sourceTree = "<group>"; };
+		4278793424536D7400AD5B70 /* BlankTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankTask.hpp; sourceTree = "<group>"; };
+		4278793524536D7400AD5B70 /* BlankPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlankPlugin.cpp; sourceTree = "<group>"; };
+		4278793624536D7400AD5B70 /* BlankObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankObject.hpp; sourceTree = "<group>"; };
+		4278793724536D7400AD5B70 /* BlankSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankSystem.hpp; sourceTree = "<group>"; };
+		4278793824536D7400AD5B70 /* BlankPlugin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankPlugin.hpp; sourceTree = "<group>"; };
+		4278793924536D7500AD5B70 /* BlankPluginPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankPluginPriv.hpp; sourceTree = "<group>"; };
+		4278793A24536D7500AD5B70 /* BlankScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankScene.hpp; sourceTree = "<group>"; };
+		427879442453712D00AD5B70 /* BlankObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlankObject.cpp; sourceTree = "<group>"; };
+		42787946245371A300AD5B70 /* BlankScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlankScene.cpp; sourceTree = "<group>"; };
+		427879482453721700AD5B70 /* BlankSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlankSystem.cpp; sourceTree = "<group>"; };
+		4278794A2453728900AD5B70 /* BlankTask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlankTask.cpp; sourceTree = "<group>"; };
+		4278794C245372CE00AD5B70 /* IBlankSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IBlankSystem.hpp; sourceTree = "<group>"; };
 		427CF8A52451989200A69CC0 /* libtbb.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtbb.dylib; path = ../../../../../../usr/local/Cellar/tbb/2020_U2/lib/libtbb.dylib; sourceTree = "<group>"; };
 		427CF8AA24521D2500A69CC0 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		427CF8AC2452CE7700A69CC0 /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "ThirdParty/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		4299FB8F245B1CC000BF45DD /* InputPluginPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputPluginPriv.hpp; sourceTree = "<group>"; };
+		4299FB90245B1CC000BF45DD /* InputSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputSystem.cpp; sourceTree = "<group>"; };
+		4299FB91245B1CC000BF45DD /* InputObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputObject.hpp; sourceTree = "<group>"; };
+		4299FB92245B1CC000BF45DD /* InputTask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputTask.cpp; sourceTree = "<group>"; };
+		4299FB93245B1CC000BF45DD /* InputScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputScene.cpp; sourceTree = "<group>"; };
+		4299FB94245B1CC000BF45DD /* InputPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputPlugin.cpp; sourceTree = "<group>"; };
+		4299FB95245B1CC000BF45DD /* InputSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputSystem.hpp; sourceTree = "<group>"; };
+		4299FB96245B1CC000BF45DD /* InputObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputObject.cpp; sourceTree = "<group>"; };
+		4299FB97245B1CC000BF45DD /* InputTask.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputTask.hpp; sourceTree = "<group>"; };
+		4299FB98245B1CC000BF45DD /* InputScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputScene.hpp; sourceTree = "<group>"; };
+		4299FB99245B1CC000BF45DD /* InputPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputPlugin.hpp; sourceTree = "<group>"; };
+		4299FB9A245B1CC000BF45DD /* IInputSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IInputSystem.hpp; sourceTree = "<group>"; };
+		4299FBA0245B1CE700BF45DD /* libinput.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libinput.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4299FBA2245B1CE700BF45DD /* input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = input.hpp; sourceTree = "<group>"; };
+		4299FBA4245B1CE700BF45DD /* inputPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = inputPriv.hpp; sourceTree = "<group>"; };
+		4299FBA6245B1CE700BF45DD /* input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
+		4299FBB8245B1E3900BF45DD /* InputObjectInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputObjectInterface.h; sourceTree = "<group>"; };
+		42A443C524535F1200A849D7 /* libBlank.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libBlank.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A4E1892413FF2600BD17FF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		42A4E18A2413FF2600BD17FF /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		42A4E18C24140BB300BD17FF /* Scheduler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
@@ -165,7 +224,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				427CF8AB24523DF100A69CC0 /* libREM.dylib in Frameworks */,
-				427CF8A62451989200A69CC0 /* libtbb.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4299FB9E245B1CE700BF45DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4299FBB7245B1DCA00BF45DD /* libREM.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A443C324535F1200A849D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A443DE24535FA800A849D7 /* libREM.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C7BEFD245307A700A32040 /* libtbb.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +375,56 @@
 			path = PlatformManager;
 			sourceTree = "<group>";
 		};
+		4299FB8E245B1CC000BF45DD /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4299FB9A245B1CC000BF45DD /* IInputSystem.hpp */,
+				4299FB96245B1CC000BF45DD /* InputObject.cpp */,
+				4299FB91245B1CC000BF45DD /* InputObject.hpp */,
+				4299FB94245B1CC000BF45DD /* InputPlugin.cpp */,
+				4299FB99245B1CC000BF45DD /* InputPlugin.hpp */,
+				4299FB8F245B1CC000BF45DD /* InputPluginPriv.hpp */,
+				4299FB93245B1CC000BF45DD /* InputScene.cpp */,
+				4299FB98245B1CC000BF45DD /* InputScene.hpp */,
+				4299FB90245B1CC000BF45DD /* InputSystem.cpp */,
+				4299FB95245B1CC000BF45DD /* InputSystem.hpp */,
+				4299FB92245B1CC000BF45DD /* InputTask.cpp */,
+				4299FB97245B1CC000BF45DD /* InputTask.hpp */,
+				4299FBB8245B1E3900BF45DD /* InputObjectInterface.h */,
+			);
+			name = Input;
+			path = BasePlugins/Input;
+			sourceTree = SOURCE_ROOT;
+		};
+		4299FBA1245B1CE700BF45DD /* input */ = {
+			isa = PBXGroup;
+			children = (
+				4299FBA2245B1CE700BF45DD /* input.hpp */,
+				4299FBA4245B1CE700BF45DD /* inputPriv.hpp */,
+				4299FBA6245B1CE700BF45DD /* input.cpp */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
+		42A443C624535F1200A849D7 /* Blank */ = {
+			isa = PBXGroup;
+			children = (
+				427879442453712D00AD5B70 /* BlankObject.cpp */,
+				4278793624536D7400AD5B70 /* BlankObject.hpp */,
+				4278793524536D7400AD5B70 /* BlankPlugin.cpp */,
+				4278793824536D7400AD5B70 /* BlankPlugin.hpp */,
+				4278793924536D7500AD5B70 /* BlankPluginPriv.hpp */,
+				42787946245371A300AD5B70 /* BlankScene.cpp */,
+				4278793A24536D7500AD5B70 /* BlankScene.hpp */,
+				427879482453721700AD5B70 /* BlankSystem.cpp */,
+				4278793724536D7400AD5B70 /* BlankSystem.hpp */,
+				4278794A2453728900AD5B70 /* BlankTask.cpp */,
+				4278793424536D7400AD5B70 /* BlankTask.hpp */,
+				4278794C245372CE00AD5B70 /* IBlankSystem.hpp */,
+			);
+			path = Blank;
+			sourceTree = "<group>";
+		};
 		42B942622444D3FF00C38BED /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +457,8 @@
 		42C3D38724156CF3008B7DF4 /* BasePlugins */ = {
 			isa = PBXGroup;
 			children = (
+				4299FB8E245B1CC000BF45DD /* Input */,
+				42A443C624535F1200A849D7 /* Blank */,
 				42B844A423CB6B5A00B2EB78 /* graphics.xcodeproj */,
 			);
 			path = BasePlugins;
@@ -361,6 +488,7 @@
 				42F81572229F0D5600BC38AD /* REM */,
 				42B942F12444EED900C38BED /* REMTest */,
 				42B94303244523DD00C38BED /* GoogleTest */,
+				4299FBA1245B1CE700BF45DD /* input */,
 				424CE68B23CE190C00E7CC2D /* Frameworks */,
 				42F81571229F0D5600BC38AD /* Products */,
 			);
@@ -373,6 +501,8 @@
 				42B942F02444EED900C38BED /* REMTest */,
 				42B943092445247600C38BED /* libgtest.dylib */,
 				4220EB44244CC9AD0022BA31 /* libTestPlugin1.dylib */,
+				42A443C524535F1200A849D7 /* libBlank.dylib */,
+				4299FBA0245B1CE700BF45DD /* libinput.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,6 +530,36 @@
 				4220EB47244CC9AD0022BA31 /* TestPlugin1.hpp in Headers */,
 				42C78794245094CF00E42E33 /* TestScene1.hpp in Headers */,
 				42C7879C2450F5AF00E42E33 /* TestTask1.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4299FB9C245B1CE700BF45DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4299FBB6245B1CF400BF45DD /* IInputSystem.hpp in Headers */,
+				4299FBB3245B1CF400BF45DD /* InputTask.hpp in Headers */,
+				4299FBAD245B1CF400BF45DD /* InputObject.hpp in Headers */,
+				4299FBB4245B1CF400BF45DD /* InputScene.hpp in Headers */,
+				4299FBA5245B1CE700BF45DD /* inputPriv.hpp in Headers */,
+				4299FBB5245B1CF400BF45DD /* InputPlugin.hpp in Headers */,
+				4299FBAB245B1CF400BF45DD /* InputPluginPriv.hpp in Headers */,
+				4299FBA3245B1CE700BF45DD /* input.hpp in Headers */,
+				4299FBB1245B1CF400BF45DD /* InputSystem.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A443C124535F1200A849D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42787951245372E000AD5B70 /* BlankPlugin.hpp in Headers */,
+				42787952245372E000AD5B70 /* BlankPluginPriv.hpp in Headers */,
+				42787958245372E000AD5B70 /* BlankTask.hpp in Headers */,
+				42787954245372E000AD5B70 /* BlankScene.hpp in Headers */,
+				42787959245372E000AD5B70 /* IBlankSystem.hpp in Headers */,
+				42787956245372E000AD5B70 /* BlankSystem.hpp in Headers */,
+				4278794F245372E000AD5B70 /* BlankObject.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +615,40 @@
 			productReference = 4220EB44244CC9AD0022BA31 /* libTestPlugin1.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		4299FB9F245B1CE700BF45DD /* input */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4299FBA8245B1CE700BF45DD /* Build configuration list for PBXNativeTarget "input" */;
+			buildPhases = (
+				4299FB9C245B1CE700BF45DD /* Headers */,
+				4299FB9D245B1CE700BF45DD /* Sources */,
+				4299FB9E245B1CE700BF45DD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = input;
+			productName = input;
+			productReference = 4299FBA0245B1CE700BF45DD /* libinput.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		42A443C424535F1200A849D7 /* Blank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A443CD24535F1200A849D7 /* Build configuration list for PBXNativeTarget "Blank" */;
+			buildPhases = (
+				42A443C124535F1200A849D7 /* Headers */,
+				42A443C224535F1200A849D7 /* Sources */,
+				42A443C324535F1200A849D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blank;
+			productName = Blank;
+			productReference = 42A443C524535F1200A849D7 /* libBlank.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		42B942B42444EAF400C38BED /* REM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42B942BD2444EAF400C38BED /* Build configuration list for PBXNativeTarget "REM" */;
@@ -483,7 +677,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				427CF8A824519F8E00A69CC0 /* PBXTargetDependency */,
+				42787933245366EF00AD5B70 /* PBXTargetDependency */,
 			);
 			name = REMTest;
 			productName = REMTest;
@@ -513,11 +707,17 @@
 		42F81568229F0D5600BC38AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Red Ember Mist";
 				TargetAttributes = {
 					4220EB43244CC9AD0022BA31 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					4299FB9F245B1CE700BF45DD = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					42A443C424535F1200A849D7 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 					42B942B42444EAF400C38BED = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -553,6 +753,8 @@
 				42B942EF2444EED900C38BED /* REMTest */,
 				42B943082445247600C38BED /* gtest */,
 				4220EB43244CC9AD0022BA31 /* TestPlugin1 */,
+				42A443C424535F1200A849D7 /* Blank */,
+				4299FB9F245B1CE700BF45DD /* input */,
 			);
 		};
 /* End PBXProject section */
@@ -573,6 +775,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				4220EB4B244CC9AD0022BA31 /* TestPlugin1.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4299FB9D245B1CE700BF45DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4299FBAE245B1CF400BF45DD /* InputTask.cpp in Sources */,
+				4299FBAF245B1CF400BF45DD /* InputScene.cpp in Sources */,
+				4299FBA7245B1CE700BF45DD /* input.cpp in Sources */,
+				4299FBAC245B1CF400BF45DD /* InputSystem.cpp in Sources */,
+				4299FBB0245B1CF400BF45DD /* InputPlugin.cpp in Sources */,
+				4299FBB2245B1CF400BF45DD /* InputObject.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A443C224535F1200A849D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4278794E245372E000AD5B70 /* BlankObject.cpp in Sources */,
+				42787955245372E000AD5B70 /* BlankSystem.cpp in Sources */,
+				42787957245372E000AD5B70 /* BlankTask.cpp in Sources */,
+				42787953245372E000AD5B70 /* BlankScene.cpp in Sources */,
+				42787950245372E000AD5B70 /* BlankPlugin.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,10 +850,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		427CF8A824519F8E00A69CC0 /* PBXTargetDependency */ = {
+		42787933245366EF00AD5B70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4220EB43244CC9AD0022BA31 /* TestPlugin1 */;
-			targetProxy = 427CF8A724519F8E00A69CC0 /* PBXContainerItemProxy */;
+			target = 42A443C424535F1200A849D7 /* Blank */;
+			targetProxy = 42787932245366EF00AD5B70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -679,6 +906,82 @@
 			};
 			name = Release;
 		};
+		4299FBA9245B1CE700BF45DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62HVCAE3S2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4299FBAA245B1CE700BF45DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62HVCAE3S2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		42A443CE24535F1200A849D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62HVCAE3S2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		42A443CF24535F1200A849D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62HVCAE3S2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		42B942BE2444EAF400C38BED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -692,7 +995,10 @@
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = /usr/local/opt/tbb/include;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/tbb/2020_U2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -712,7 +1018,10 @@
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = /usr/local/opt/tbb/include;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/tbb/2020_U2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -842,6 +1151,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -904,6 +1214,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -940,6 +1251,24 @@
 			buildConfigurations = (
 				4220EB4D244CC9AD0022BA31 /* Debug */,
 				4220EB4E244CC9AD0022BA31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4299FBA8245B1CE700BF45DD /* Build configuration list for PBXNativeTarget "input" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4299FBA9245B1CE700BF45DD /* Debug */,
+				4299FBAA245B1CE700BF45DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A443CD24535F1200A849D7 /* Build configuration list for PBXNativeTarget "Blank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A443CE24535F1200A849D7 /* Debug */,
+				42A443CF24535F1200A849D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

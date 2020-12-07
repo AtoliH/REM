@@ -16,7 +16,7 @@
 class TestTask1: public ITask {
     
 public:
-    void execute() {
+    void execute() const override {
 
     }
 };
