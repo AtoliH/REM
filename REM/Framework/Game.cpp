@@ -11,21 +11,19 @@
 
 
 Game::Game(): platformManager(&pluginManager), loader(&platformManager) {
-    platformManager.load("libBlank.dylib");
     
-    auto scene = loader.loadScene<RScene<IBlankSystem>>(&stateManager);
-    
-    scheduler.setScene(scene);
 }
 
 int Game::run() {
+    
+    this->init();
     
     // - Process window messages
     
     // - Scheduler execution:
     // Determine systems to execute
     // Send to task manager
-    // Wait for ocmpletion
+    // Wait for completion
     
     // - Distribute changes
     

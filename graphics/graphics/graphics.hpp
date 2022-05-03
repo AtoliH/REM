@@ -17,8 +17,8 @@
 class graphics: public IPlugin {
     
 public:
-    virtual void createScene();
-    virtual void destroyScene();
+    virtual std::shared_ptr<IScene> createScene() const;
+    virtual ~graphics();
 };
 
 #pragma GCC visibility pop

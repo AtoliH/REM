@@ -16,6 +16,7 @@
 		4220EB47244CC9AD0022BA31 /* TestPlugin1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4220EB46244CC9AD0022BA31 /* TestPlugin1.hpp */; };
 		4220EB49244CC9AD0022BA31 /* TestPlugin1Priv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4220EB48244CC9AD0022BA31 /* TestPlugin1Priv.hpp */; };
 		4220EB4B244CC9AD0022BA31 /* TestPlugin1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4220EB4A244CC9AD0022BA31 /* TestPlugin1.cpp */; };
+		42435B99257F7C1E00D6DF1B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42435B98257F7C1E00D6DF1B /* App.swift */; };
 		4245671A244CCD3A0090280F /* TestSystem1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42456718244CCD3A0090280F /* TestSystem1.hpp */; };
 		426A98172447660E003E60EB /* DynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426A98152447660E003E60EB /* DynamicLibrary.cpp */; };
 		426A98182447660E003E60EB /* DynamicLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 426A98162447660E003E60EB /* DynamicLibrary.hpp */; };
@@ -131,6 +132,7 @@
 		4220EB46244CC9AD0022BA31 /* TestPlugin1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin1.hpp; sourceTree = "<group>"; };
 		4220EB48244CC9AD0022BA31 /* TestPlugin1Priv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPlugin1Priv.hpp; sourceTree = "<group>"; };
 		4220EB4A244CC9AD0022BA31 /* TestPlugin1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestPlugin1.cpp; sourceTree = "<group>"; };
+		42435B98257F7C1E00D6DF1B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		42456718244CCD3A0090280F /* TestSystem1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestSystem1.hpp; sourceTree = "<group>"; };
 		425EA846244D188600E6DCC0 /* TestSystem21.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestSystem21.cpp; sourceTree = "<group>"; };
 		425EA847244D188600E6DCC0 /* TestSystem21.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestSystem21.hpp; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		426A98162447660E003E60EB /* DynamicLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DynamicLibrary.hpp; sourceTree = "<group>"; };
 		426A981924476D27003E60EB /* PluginManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PluginManager.cpp; sourceTree = "<group>"; };
 		426A981A24476D27003E60EB /* PluginManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PluginManager.hpp; sourceTree = "<group>"; };
+		427010D526ECC34200A2D308 /* REMTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = REMTest.entitlements; sourceTree = "<group>"; };
 		4278793424536D7400AD5B70 /* BlankTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankTask.hpp; sourceTree = "<group>"; };
 		4278793524536D7400AD5B70 /* BlankPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlankPlugin.cpp; sourceTree = "<group>"; };
 		4278793624536D7400AD5B70 /* BlankObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlankObject.hpp; sourceTree = "<group>"; };
@@ -307,6 +310,14 @@
 			path = TestPlugin1;
 			sourceTree = "<group>";
 		};
+		42435B90257F74B800D6DF1B /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				42435B98257F7C1E00D6DF1B /* App.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
 		424CE68B23CE190C00E7CC2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +376,7 @@
 		426A9814244765F4003E60EB /* PlatformManager */ = {
 			isa = PBXGroup;
 			children = (
+				42435B90257F74B800D6DF1B /* Window */,
 				42A4E1982415140F00BD17FF /* PlatformManager.cpp */,
 				42A4E1992415140F00BD17FF /* PlatformManager.hpp */,
 				426A98152447660E003E60EB /* DynamicLibrary.cpp */,
@@ -436,6 +448,7 @@
 		42B942F12444EED900C38BED /* REMTest */ = {
 			isa = PBXGroup;
 			children = (
+				427010D526ECC34200A2D308 /* REMTest.entitlements */,
 				4220EB3E244CC9040022BA31 /* TestPlugins */,
 				4220EB38244C79690022BA31 /* main.cpp */,
 				42B942F22444EED900C38BED /* REMTest.cpp */,
@@ -721,6 +734,7 @@
 					};
 					42B942B42444EAF400C38BED = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1220;
 					};
 					42B942EF2444EED900C38BED = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -810,6 +824,7 @@
 				42B942EA2444EB8E00C38BED /* StateManager.cpp in Sources */,
 				42B942D02444EB7700C38BED /* EnvironmentManager.cpp in Sources */,
 				4220EB36244C66A40022BA31 /* Loader.cpp in Sources */,
+				42435B99257F7C1E00D6DF1B /* App.swift in Sources */,
 				42C78784244F7A7300E42E33 /* IRObject.cpp in Sources */,
 				42C78789244F807000E42E33 /* ITask.cpp in Sources */,
 				42B942D62444EB8500C38BED /* RObject.cpp in Sources */,
@@ -986,6 +1001,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -995,13 +1011,20 @@
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = /usr/local/opt/tbb/include;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/tbb/2020_U2/lib,
+					/usr/local/opt/tbb/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1009,6 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1018,13 +1042,19 @@
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = /usr/local/opt/tbb/include;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/tbb/2020_U2/lib,
+					/usr/local/opt/tbb/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1034,6 +1064,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_ENTITLEMENTS = REMTest/REMTest.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
@@ -1043,6 +1074,7 @@
 					/usr/local/opt/tbb/include,
 					"$(PROJECT_DIR)/ThirdParty/googletest/include",
 					"$(PROJECT_DIR)/ThirdParty/googlemock/include",
+					"\"$(SRCROOT)/graphics\"",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
@@ -1057,6 +1089,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_ENTITLEMENTS = REMTest/REMTest.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62HVCAE3S2;
@@ -1066,6 +1099,7 @@
 					/usr/local/opt/tbb/include,
 					"$(PROJECT_DIR)/ThirdParty/googletest/include",
 					"$(PROJECT_DIR)/ThirdParty/googlemock/include",
+					"\"$(SRCROOT)/graphics\"",
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;

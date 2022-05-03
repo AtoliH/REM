@@ -9,17 +9,23 @@
 #include <gtest/gtest.h>
 #include "Game.hpp"
 
+#include <graphics/graphics.hpp>
 
-TEST(TestFramework, TestRun) {
+
+/*TEST(TestFramework, TestRun) {
     auto app = Game();
     ASSERT_EQ(app.run(), 0);
-}
+}*/
 
 class TestGame : public Game {
     
 public:
     void init() {
+        platformManager.load("libgraphics.dylib");
         
+        auto scene = loader.loadScene<RScene<graphics>>(&stateManager);
+        
+        scheduler.setScene(scene);
     }
 };
 

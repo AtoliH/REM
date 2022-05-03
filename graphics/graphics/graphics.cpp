@@ -7,8 +7,11 @@
 //
 
 #include <iostream>
+
 #include "graphics.hpp"
 #include "graphicsPriv.hpp"
+
+#include "GraphicsScene.hpp"
 
 extern "C" void openGUI();
 
@@ -20,9 +23,11 @@ extern "C" void destroy_handle(IPlugin* handle) {
     delete static_cast<graphics*>(handle);
 }
 
-void graphics::createScene() {
+std::shared_ptr<IScene> graphics::createScene() const {
     openGUI();
+    return std::make_shared<GraphicsScene>();
 }
 
-void graphics::destroyScene() {
+graphics::~graphics() {
+    
 }

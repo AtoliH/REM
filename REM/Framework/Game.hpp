@@ -11,10 +11,9 @@
 
 #include "Scheduler.hpp"
 
-#include "IBlankSystem.hpp"
-
 class Game {
-    
+
+protected:
     PluginManager pluginManager;
     
     PlatformManager platformManager;
@@ -26,7 +25,7 @@ class Game {
     /*
      * TODO: temporary BlankSystem (templatize Game)
      */
-    Scheduler<IBlankSystem> scheduler;
+    Scheduler<IPlugin> scheduler;
     
 public:
     Game();
